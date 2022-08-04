@@ -71,45 +71,28 @@ function renderCountry(countries) {
         <p class="counry-population"><b>Population:</b> <i>${population}</i></p>
         <p class="counry-laguages"><b>Languages:</b> <i>${Object.values(languages)}</i></p>`;
 
-        // checkSize(size, elementInfo, elementSymbols);
-
         if (size > 10) {
-            // Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
-            console.log('add more letters')
-            return
+            Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
+            return;
         }
 
-        if (size <= 1) {
+        checkSizeForRender(size, elementSymbols, elementInfo);
+    }
+}
+
+// // ==============================
+// // check size answer object for render
+
+function checkSizeForRender(size, elementSymbols, elementInfo) {
+
+    if (size <= 1) {
             countryList.insertAdjacentHTML('beforeend', elementSymbols);
             countryInfo.insertAdjacentHTML('beforeend', elementInfo);
         }
         else {
             countryList.insertAdjacentHTML('beforeend', elementSymbols);
         }
-    }
 }
-
-// ==============================
-// check size answer object 
-
-// function checkSize(size, elementInfo, elementSymbols) {
-
-//     // const size = Object.keys(countries).length;
-
-//         if (size > 10) {
-//             // Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
-//             console.log('add more letters')
-//             return
-//         }
-
-//         if (size <= 1) {
-//             countryList.insertAdjacentHTML('beforeend', elementSymbols);
-//             countryInfo.insertAdjacentHTML('beforeend', elementInfo);
-//         }
-//         else {
-//             countryList.insertAdjacentHTML('beforeend', elementSymbols);
-//         }
-// }
 
 // ==============================
 // fetch error
@@ -125,3 +108,8 @@ function removeHTML () {
     countryList.innerHTML = '';
     countryInfo.innerHTML = '';
 }
+
+
+
+
+
