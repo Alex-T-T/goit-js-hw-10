@@ -108,8 +108,3 @@ function removeHTML () {
     countryList.innerHTML = '';
     countryInfo.innerHTML = '';
 }
-
-
-
-
-
