@@ -18,3 +18,46 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+/* ============================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ============================== */
+
+.country-item {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+
+}
+
+.country-flag {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
